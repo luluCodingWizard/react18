@@ -5,7 +5,7 @@ const List = () => {
   return (
     <div className={styles.list}>
       {todos.map((todo) => (
-        <div className={styles.item}>
+        <div key={todo.key} className={styles.item}>
           <h4 className={styles.item_title}> {todo.title}</h4>
           <p> {todo.completed ? "completed" : "not completed"}</p>
         </div>
