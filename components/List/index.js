@@ -1,14 +1,12 @@
 import styles from "./list.module.css";
 import todos from "../../mocks/todo";
+import TodoItem from "../TodoItem";
 
 const List = () => {
   return (
     <div className={styles.list}>
       {todos.map((todo) => (
-        <div key={todo.key} className={styles.item}>
-          <h4 className={styles.item_title}> {todo.title}</h4>
-          <p> {todo.completed ? "completed" : "not completed"}</p>
-        </div>
+        <TodoItem item={todo} />
       ))}
     </div>
   );
